@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20211019 19:32:17.647" rpa="false" schemaversion="2">
+<suite id="s1" name="Script" source="C:\development\robot-scripts\test_project\tests\Script.robot">
+<test id="s1-t1" name="User must sign in and select some elements">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211019 19:32:17.801" level="INFO">Opening browser 'chrome' to base url 'https://jdi-testing.github.io/jdi-light/index.html'.</msg>
+<status status="PASS" starttime="20211019 19:32:17.801" endtime="20211019 19:32:19.589"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211019 19:32:19.589" endtime="20211019 19:32:19.715"/>
+</kw>
+<status status="PASS" starttime="20211019 19:32:17.801" endtime="20211019 19:32:19.715"/>
+</kw>
+<kw name="ScriptApp.Enter to Landing Page" library="ScriptApp">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211019 19:32:19.716" level="INFO">Opening url 'https://jdi-testing.github.io/jdi-light/index.html'</msg>
+<status status="PASS" starttime="20211019 19:32:19.716" endtime="20211019 19:32:19.967"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211019 19:32:20.981" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211019 19:32:19.967" endtime="20211019 19:32:20.981"/>
+</kw>
+<status status="PASS" starttime="20211019 19:32:19.716" endtime="20211019 19:32:20.981"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Home Page</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211019 19:32:20.981" endtime="20211019 19:32:20.992"/>
+</kw>
+<status status="PASS" starttime="20211019 19:32:20.981" endtime="20211019 19:32:20.992"/>
+</kw>
+<status status="PASS" starttime="20211019 19:32:19.716" endtime="20211019 19:32:20.992"/>
+</kw>
+<kw name="ScriptApp.Login Web site" library="ScriptApp">
+<kw name="Perform login" library="Login">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/header/div/nav/ul[2]/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211019 19:32:20.993" level="INFO">Clicking element 'xpath=/html/body/header/div/nav/ul[2]/li/a'.</msg>
+<status status="PASS" starttime="20211019 19:32:20.993" endtime="20211019 19:32:21.028"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211019 19:32:22.044" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211019 19:32:21.028" endtime="20211019 19:32:22.044"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=name</arg>
+<arg>@{USENAME_PASSWORD_LOGGINED}[0]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211019 19:32:22.045" level="FAIL">Value of variable '@{USENAME_PASSWORD_LOGGINED}[0]' is not list or list-like.</msg>
+<status status="FAIL" starttime="20211019 19:32:22.044" endtime="20211019 19:32:22.045"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211019 19:32:22.046" endtime="20211019 19:32:22.046"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20211019 19:32:22.046" endtime="20211019 19:32:22.046"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211019 19:32:22.046" endtime="20211019 19:32:22.046"/>
+</kw>
+<status status="FAIL" starttime="20211019 19:32:20.993" endtime="20211019 19:32:22.046"/>
+</kw>
+<kw name="Verify login" library="Login">
+<status status="NOT RUN" starttime="20211019 19:32:22.046" endtime="20211019 19:32:22.046"/>
+</kw>
+<status status="FAIL" starttime="20211019 19:32:20.992" endtime="20211019 19:32:22.047"/>
+</kw>
+<kw name="ScriptApp.Navigate to Service Page" library="ScriptApp">
+<status status="NOT RUN" starttime="20211019 19:32:22.047" endtime="20211019 19:32:22.047"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211019 19:32:22.048" endtime="20211019 19:32:24.188"/>
+</kw>
+<status status="PASS" starttime="20211019 19:32:22.048" endtime="20211019 19:32:24.188"/>
+</kw>
+<doc>Perform some actions at the test site</doc>
+<tag>Exercise 1</tag>
+<status status="FAIL" starttime="20211019 19:32:17.800" endtime="20211019 19:32:24.189">Value of variable '@{USENAME_PASSWORD_LOGGINED}[0]' is not list or list-like.</status>
+</test>
+<doc>Perform some actions at the test site</doc>
+<status status="FAIL" starttime="20211019 19:32:17.648" endtime="20211019 19:32:24.191"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Exercise 1</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Script">Script</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
