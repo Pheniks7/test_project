@@ -9,7 +9,7 @@ Enter to Landing Page
     LandingPage.Load and Verify
 
 Login Web site
-    Login.Login and Verify
+    Login.Login and Verify  @{USENAME_PASSWORD_LOGGINED}
 
 Service Page actions
     ServicePage.Load and Verify
