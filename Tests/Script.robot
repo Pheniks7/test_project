@@ -14,6 +14,10 @@ ${USENAME} =  Roman
 ${PASSWORD} =  Jdi1234
 ${LOGGINED} =  ROMAN IOVLEV
 #@{USENAME_PASSWORD_LOGGINED} =  Roman  Jdi1234  ROMAN IOVLEV
+${WATER} =  Water: condition changed to true
+${WIND} =  Wind: condition changed to true
+${SELEN} =  metal: value changed to  Selen
+${YELLOW} =  Colors: value changed to Yellow
 
 *** Test Cases ***
 User must sign in and select some elements
@@ -22,4 +26,4 @@ User must sign in and select some elements
     ScriptApp.Enter to Landing Page
     ScriptApp.Login Web site
     ScriptApp.Navigate to Service Page
-    #ScriptApp.Assert actions
+    ScriptApp.Assert actions

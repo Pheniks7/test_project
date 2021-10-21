@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20211019 19:32:17.647" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20211021 11:43:39.076" rpa="false" schemaversion="2">
 <suite id="s1" name="Script" source="C:\development\robot-scripts\test_project\tests\Script.robot">
 <test id="s1-t1" name="User must sign in and select some elements">
 <kw name="Begin Web Test" library="Common" type="SETUP">
@@ -7,111 +7,265 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211019 19:32:17.801" level="INFO">Opening browser 'chrome' to base url 'https://jdi-testing.github.io/jdi-light/index.html'.</msg>
-<status status="PASS" starttime="20211019 19:32:17.801" endtime="20211019 19:32:19.589"/>
+<msg timestamp="20211021 11:43:39.233" level="INFO">Opening browser 'chrome' to base url 'https://jdi-testing.github.io/jdi-light/index.html'.</msg>
+<status status="PASS" starttime="20211021 11:43:39.233" endtime="20211021 11:43:41.010"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20211019 19:32:19.589" endtime="20211019 19:32:19.715"/>
+<status status="PASS" starttime="20211021 11:43:41.011" endtime="20211021 11:43:41.127"/>
 </kw>
-<status status="PASS" starttime="20211019 19:32:17.801" endtime="20211019 19:32:19.715"/>
+<status status="PASS" starttime="20211021 11:43:39.233" endtime="20211021 11:43:41.127"/>
 </kw>
 <kw name="ScriptApp.Enter to Landing Page" library="ScriptApp">
 <kw name="Load" library="LandingPage">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20211019 19:32:19.716" level="INFO">Opening url 'https://jdi-testing.github.io/jdi-light/index.html'</msg>
-<status status="PASS" starttime="20211019 19:32:19.716" endtime="20211019 19:32:19.967"/>
+<msg timestamp="20211021 11:43:41.129" level="INFO">Opening url 'https://jdi-testing.github.io/jdi-light/index.html'</msg>
+<status status="PASS" starttime="20211021 11:43:41.129" endtime="20211021 11:43:41.364"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211019 19:32:20.981" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20211019 19:32:19.967" endtime="20211019 19:32:20.981"/>
+<msg timestamp="20211021 11:43:42.371" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:41.364" endtime="20211021 11:43:42.371"/>
 </kw>
-<status status="PASS" starttime="20211019 19:32:19.716" endtime="20211019 19:32:20.981"/>
+<status status="PASS" starttime="20211021 11:43:41.128" endtime="20211021 11:43:42.371"/>
 </kw>
 <kw name="Verify Page Loaded" library="LandingPage">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Home Page</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20211019 19:32:20.981" endtime="20211019 19:32:20.992"/>
+<status status="PASS" starttime="20211021 11:43:42.372" endtime="20211021 11:43:42.386"/>
 </kw>
-<status status="PASS" starttime="20211019 19:32:20.981" endtime="20211019 19:32:20.992"/>
+<status status="PASS" starttime="20211021 11:43:42.372" endtime="20211021 11:43:42.387"/>
 </kw>
-<status status="PASS" starttime="20211019 19:32:19.716" endtime="20211019 19:32:20.992"/>
+<status status="PASS" starttime="20211021 11:43:41.128" endtime="20211021 11:43:42.387"/>
 </kw>
 <kw name="ScriptApp.Login Web site" library="ScriptApp">
 <kw name="Perform login" library="Login">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=/html/body/header/div/nav/ul[2]/li/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211019 19:32:20.993" level="INFO">Clicking element 'xpath=/html/body/header/div/nav/ul[2]/li/a'.</msg>
-<status status="PASS" starttime="20211019 19:32:20.993" endtime="20211019 19:32:21.028"/>
+<msg timestamp="20211021 11:43:42.388" level="INFO">Clicking element 'xpath=/html/body/header/div/nav/ul[2]/li/a'.</msg>
+<status status="PASS" starttime="20211021 11:43:42.388" endtime="20211021 11:43:42.426"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211019 19:32:22.044" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20211019 19:32:21.028" endtime="20211019 19:32:22.044"/>
+<msg timestamp="20211021 11:43:43.426" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:42.426" endtime="20211021 11:43:43.426"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=name</arg>
-<arg>@{USENAME_PASSWORD_LOGGINED}[0]</arg>
+<arg>${USENAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211019 19:32:22.045" level="FAIL">Value of variable '@{USENAME_PASSWORD_LOGGINED}[0]' is not list or list-like.</msg>
-<status status="FAIL" starttime="20211019 19:32:22.044" endtime="20211019 19:32:22.045"/>
+<msg timestamp="20211021 11:43:43.426" level="INFO">Typing text 'Roman' into text field 'id=name'.</msg>
+<status status="PASS" starttime="20211021 11:43:43.426" endtime="20211021 11:43:43.479"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20211019 19:32:22.046" endtime="20211019 19:32:22.046"/>
+<msg timestamp="20211021 11:43:43.480" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20211021 11:43:43.506" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211021 11:43:43.532" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211021 11:43:43.479" endtime="20211021 11:43:43.533"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20211019 19:32:22.046" endtime="20211019 19:32:22.046"/>
+<msg timestamp="20211021 11:43:44.542" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:43.533" endtime="20211021 11:43:44.542"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20211019 19:32:22.046" endtime="20211019 19:32:22.046"/>
+<msg timestamp="20211021 11:43:44.543" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20211021 11:43:44.542" endtime="20211021 11:43:44.575"/>
 </kw>
-<status status="FAIL" starttime="20211019 19:32:20.993" endtime="20211019 19:32:22.046"/>
+<status status="PASS" starttime="20211021 11:43:42.388" endtime="20211021 11:43:44.575"/>
 </kw>
 <kw name="Verify login" library="Login">
-<status status="NOT RUN" starttime="20211019 19:32:22.046" endtime="20211019 19:32:22.046"/>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${LOGGINED}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211021 11:43:44.590" level="INFO">Element 'id=user-name' contains text 'ROMAN IOVLEV'.</msg>
+<status status="PASS" starttime="20211021 11:43:44.576" endtime="20211021 11:43:44.590"/>
 </kw>
-<status status="FAIL" starttime="20211019 19:32:20.992" endtime="20211019 19:32:22.047"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211021 11:43:45.591" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:44.590" endtime="20211021 11:43:45.591"/>
+</kw>
+<status status="PASS" starttime="20211021 11:43:44.575" endtime="20211021 11:43:45.591"/>
+</kw>
+<status status="PASS" starttime="20211021 11:43:42.388" endtime="20211021 11:43:45.592"/>
 </kw>
 <kw name="ScriptApp.Navigate to Service Page" library="ScriptApp">
-<status status="NOT RUN" starttime="20211019 19:32:22.047" endtime="20211019 19:32:22.047"/>
+<kw name="Load and Verify" library="ServicePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/header/div/nav/ul[1]/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211021 11:43:45.595" level="INFO">Clicking element 'xpath=/html/body/header/div/nav/ul[1]/li[3]/a'.</msg>
+<status status="PASS" starttime="20211021 11:43:45.595" endtime="20211021 11:43:45.632"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211021 11:43:46.646" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:45.632" endtime="20211021 11:43:46.646"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Different elements</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211021 11:43:46.646" level="INFO">Clicking link 'Different elements'.</msg>
+<status status="PASS" starttime="20211021 11:43:46.646" endtime="20211021 11:43:47.189"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>Default Button</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20211021 11:43:47.209" level="INFO">Current page contains button 'Default Button'.</msg>
+<status status="PASS" starttime="20211021 11:43:47.189" endtime="20211021 11:43:47.209"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211021 11:43:48.219" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:47.209" endtime="20211021 11:43:48.219"/>
+</kw>
+<status status="PASS" starttime="20211021 11:43:45.595" endtime="20211021 11:43:48.219"/>
+</kw>
+<kw name="Select checkboxes and buttons" library="ServicePage">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[2]/main/div[2]/div/div[2]/label[1]/input</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20211021 11:43:48.219" level="INFO">Selecting checkbox 'xpath=/html/body/div/div[2]/main/div[2]/div/div[2]/label[1]/input'.</msg>
+<status status="PASS" starttime="20211021 11:43:48.219" endtime="20211021 11:43:48.266"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211021 11:43:49.280" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:48.266" endtime="20211021 11:43:49.280"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.uui-main-container.page-inside &gt; main &gt; div.main-content &gt; div &gt; div:nth-child(2) &gt; label:nth-child(3) &gt; input[type=checkbox]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20211021 11:43:49.280" level="INFO">Selecting checkbox 'css=body &gt; div &gt; div.uui-main-container.page-inside &gt; main &gt; div.main-content &gt; div &gt; div:nth-child(2) &gt; label:nth-child(3) &gt; input[type=checkbox]'.</msg>
+<status status="PASS" starttime="20211021 11:43:49.280" endtime="20211021 11:43:49.320"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211021 11:43:50.333" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:49.320" endtime="20211021 11:43:50.333"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.uui-main-container.page-inside &gt; main &gt; div.main-content &gt; div &gt; div:nth-child(3) &gt; label:nth-child(4) &gt; input[type=radio]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211021 11:43:50.334" level="INFO">Clicking element 'css=body &gt; div &gt; div.uui-main-container.page-inside &gt; main &gt; div.main-content &gt; div &gt; div:nth-child(3) &gt; label:nth-child(4) &gt; input[type=radio]'.</msg>
+<status status="PASS" starttime="20211021 11:43:50.333" endtime="20211021 11:43:50.376"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211021 11:43:51.388" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:50.376" endtime="20211021 11:43:51.388"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.uui-main-container.page-inside &gt; main &gt; div.main-content &gt; div &gt; div.colors &gt; select</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211021 11:43:51.389" level="INFO">Clicking element 'css=body &gt; div &gt; div.uui-main-container.page-inside &gt; main &gt; div.main-content &gt; div &gt; div.colors &gt; select'.</msg>
+<status status="PASS" starttime="20211021 11:43:51.388" endtime="20211021 11:43:51.435"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211021 11:43:52.448" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:51.435" endtime="20211021 11:43:52.448"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/div[2]/main/div[2]/div/div[4]/select/option[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211021 11:43:52.449" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/main/div[2]/div/div[4]/select/option[4]'.</msg>
+<status status="PASS" starttime="20211021 11:43:52.448" endtime="20211021 11:43:52.481"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211021 11:43:53.490" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211021 11:43:52.481" endtime="20211021 11:43:53.490"/>
+</kw>
+<status status="PASS" starttime="20211021 11:43:48.219" endtime="20211021 11:43:53.490"/>
+</kw>
+<status status="PASS" starttime="20211021 11:43:45.594" endtime="20211021 11:43:53.491"/>
+</kw>
+<kw name="ScriptApp.Assert actions" library="ScriptApp">
+<kw name="Confirm Checkbox status" library="Assert">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css=#mCSB_2_container &gt; section:nth-child(1) &gt; div.info-panel-body.info-panel-body-log &gt; div &gt; ul &gt; li:nth-child(4)</arg>
+<arg>${WATER}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211021 11:43:53.517" level="INFO">Element 'css=#mCSB_2_container &gt; section:nth-child(1) &gt; div.info-panel-body.info-panel-body-log &gt; div &gt; ul &gt; li:nth-child(4)' contains text 'Water: condition changed to true'.</msg>
+<status status="PASS" starttime="20211021 11:43:53.493" endtime="20211021 11:43:53.517"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css=#mCSB_2_container &gt; section:nth-child(1) &gt; div.info-panel-body.info-panel-body-log &gt; div &gt; ul &gt; li:nth-child(3)</arg>
+<arg>${WIND}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211021 11:43:53.533" level="INFO">Element 'css=#mCSB_2_container &gt; section:nth-child(1) &gt; div.info-panel-body.info-panel-body-log &gt; div &gt; ul &gt; li:nth-child(3)' contains text 'Wind: condition changed to true'.</msg>
+<status status="PASS" starttime="20211021 11:43:53.517" endtime="20211021 11:43:53.533"/>
+</kw>
+<status status="PASS" starttime="20211021 11:43:53.493" endtime="20211021 11:43:53.533"/>
+</kw>
+<kw name="Confirm Radio button status" library="Assert">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css=#mCSB_2_container &gt; section:nth-child(1) &gt; div.info-panel-body.info-panel-body-log &gt; div &gt; ul &gt; li:nth-child(2)</arg>
+<arg>${SELEN}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211021 11:43:53.550" level="INFO">Element 'css=#mCSB_2_container &gt; section:nth-child(1) &gt; div.info-panel-body.info-panel-body-log &gt; div &gt; ul &gt; li:nth-child(2)' contains text 'metal: value changed to Selen'.</msg>
+<status status="PASS" starttime="20211021 11:43:53.533" endtime="20211021 11:43:53.550"/>
+</kw>
+<status status="PASS" starttime="20211021 11:43:53.533" endtime="20211021 11:43:53.550"/>
+</kw>
+<kw name="Confirm Dropdown name status" library="Assert">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css=#mCSB_2_container &gt; section:nth-child(1) &gt; div.info-panel-body.info-panel-body-log &gt; div &gt; ul &gt; li:nth-child(1)</arg>
+<arg>${YELLOW}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211021 11:43:53.566" level="INFO">Element 'css=#mCSB_2_container &gt; section:nth-child(1) &gt; div.info-panel-body.info-panel-body-log &gt; div &gt; ul &gt; li:nth-child(1)' contains text 'Colors: value changed to Yellow'.</msg>
+<status status="PASS" starttime="20211021 11:43:53.550" endtime="20211021 11:43:53.566"/>
+</kw>
+<status status="PASS" starttime="20211021 11:43:53.550" endtime="20211021 11:43:53.566"/>
+</kw>
+<status status="PASS" starttime="20211021 11:43:53.492" endtime="20211021 11:43:53.566"/>
 </kw>
 <kw name="End Web Test" library="Common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20211019 19:32:22.048" endtime="20211019 19:32:24.188"/>
+<status status="PASS" starttime="20211021 11:43:53.567" endtime="20211021 11:43:55.684"/>
 </kw>
-<status status="PASS" starttime="20211019 19:32:22.048" endtime="20211019 19:32:24.188"/>
+<status status="PASS" starttime="20211021 11:43:53.567" endtime="20211021 11:43:55.685"/>
 </kw>
 <doc>Perform some actions at the test site</doc>
 <tag>Exercise 1</tag>
-<status status="FAIL" starttime="20211019 19:32:17.800" endtime="20211019 19:32:24.189">Value of variable '@{USENAME_PASSWORD_LOGGINED}[0]' is not list or list-like.</status>
+<status status="PASS" starttime="20211021 11:43:39.232" endtime="20211021 11:43:55.686"/>
 </test>
 <doc>Perform some actions at the test site</doc>
-<status status="FAIL" starttime="20211019 19:32:17.648" endtime="20211019 19:32:24.191"/>
+<status status="PASS" starttime="20211021 11:43:39.077" endtime="20211021 11:43:55.689"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Exercise 1</stat>
+<stat pass="1" fail="0" skip="0">Exercise 1</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Script">Script</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Script">Script</stat>
 </suite>
 </statistics>
 <errors>
