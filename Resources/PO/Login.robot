@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 @{USENAME_PASSWORD_LOGGINED} =  Roman  Jdi1234  ROMAN IOVLEV
-${ICON} =  xpath=/html/body/header/div/nav/ul[2]/li/a
+${ICON} =  xpath:/html/body/header/div/nav/ul[2]/li/a
 
 
 *** Keywords ***
