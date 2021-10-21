@@ -2,12 +2,7 @@
 Library  SeleniumLibrary
 
 
-*** Variables ***
-
-
 *** Keywords ***
-Load
+Load and Verify
     Go To  ${URL}
-
-Verify Page Loaded
     Wait Until Page Contains  Home Page

@@ -6,12 +6,10 @@ Resource  Resources/PO/ServicePage.robot
 
 *** Keywords ***
 Enter to Landing Page
-    LandingPage.Load
-    LandingPage.Verify Page Loaded
+    LandingPage.Load and Verify
 
 Login Web site
-    Login.Perform login
-    login.Verify login
+    Login.Login and Verify
 
 Service Page actions
     ServicePage.Load and Verify
