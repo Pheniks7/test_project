@@ -22,7 +22,7 @@ ${YELLOW}  Colors: value changed to Yellow
 
 *** Keywords ***
 Load and Verify
-    Click Element  ${ServiceMenu}
+    Click Link  Service  #${ServiceMenu}
     Click Link  Different elements
     Page Should Contain Button  Default Button
 
