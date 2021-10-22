@@ -21,4 +21,5 @@ GreenSelect = "//option[text()[contains(.,'Green')]]"
 BlueSelect = "//option[text()[contains(.,'Blue')]]"
 YellowSelect = "//option[text()[contains(.,'Yellow')]]"
 
-LogWindow = "xpath://*[@id='mCSB_2_container']/section[1]/div[2]/div/ul"
+#LogWindow = "xpath://*[@id='mCSB_2_container']/section[1]/div[2]/div/ul"
+LogWindow = "//div[text()[contains(.,'Log')]]//following-sibling::div//descendant::"

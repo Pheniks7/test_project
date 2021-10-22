@@ -12,7 +12,7 @@ ${FIRE}  Fire: condition changed to true
 ${GOLD}  metal: value changed to  Gold
 ${SILVER}  metal: value changed to  Silver
 ${BRONZE}  metal: value changed to  Bronze
-${SELEN}  metal: value changed to  Selen
+${SELEN}  Selen
 
 ${RED}  Colors: value changed to Red
 ${GREEN}  Colors: value changed to Green
@@ -29,12 +29,12 @@ Load and Verify
 Select checkboxes and buttons
     Select Checkbox  ${WaterCheckbox}
     Select Checkbox  ${WindCheckbox}
-    Click Element  ${SelenRadio}
+    Click Element  ${SilverRadio}
     Click Element  ${ColorMenu}
     Click Element  ${YellowSelect}
 
 Confirm Selection status
     Page Should Contain  ${WATER}
     Page Should Contain  ${WIND}
-    Element Should Contain  ${LogWindow}  ${SELEN}
+    Page Should Contain  ${SELEN}
     Page Should Contain  ${YELLOW}
