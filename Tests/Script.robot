@@ -8,8 +8,8 @@ Test Teardown  End Web Test
 # python -m robot -d results tests/Script.robot
 
 *** Variables ***
-${BROWSER} =  chrome
-${URL} =  https://jdi-testing.github.io/jdi-light/index.html
+${BROWSER}  chrome
+${URL}  https://jdi-testing.github.io/jdi-light/index.html
 
 
 *** Test Cases ***

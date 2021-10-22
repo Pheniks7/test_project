@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20211021 17:12:30.516" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20211022 17:20:06.929" rpa="false" schemaversion="2">
 <suite id="s1" name="Script" source="C:\development\robot-scripts\test_project\tests\Script.robot">
 <test id="s1-t1" name="User must sign in and select some elements">
 <kw name="Begin Web Test" library="Common" type="SETUP">
@@ -7,177 +7,171 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211021 17:12:30.676" level="INFO">Opening browser 'chrome' to base url 'https://jdi-testing.github.io/jdi-light/index.html'.</msg>
-<status status="PASS" starttime="20211021 17:12:30.676" endtime="20211021 17:12:32.422"/>
+<msg timestamp="20211022 17:20:07.080" level="INFO">Opening browser 'chrome' to base url 'https://jdi-testing.github.io/jdi-light/index.html'.</msg>
+<status status="PASS" starttime="20211022 17:20:07.080" endtime="20211022 17:20:08.777"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20211021 17:12:32.422" endtime="20211021 17:12:32.545"/>
+<status status="PASS" starttime="20211022 17:20:08.777" endtime="20211022 17:20:08.888"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:30.676" endtime="20211021 17:12:32.545"/>
+<status status="PASS" starttime="20211022 17:20:07.080" endtime="20211022 17:20:08.888"/>
 </kw>
 <kw name="Enter to Landing Page" library="ScriptApp">
-<kw name="Load" library="LandingPage">
+<kw name="Load and Verify" library="LandingPage">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20211021 17:12:32.545" level="INFO">Opening url 'https://jdi-testing.github.io/jdi-light/index.html'</msg>
-<status status="PASS" starttime="20211021 17:12:32.545" endtime="20211021 17:12:32.804"/>
+<msg timestamp="20211022 17:20:08.888" level="INFO">Opening url 'https://jdi-testing.github.io/jdi-light/index.html'</msg>
+<status status="PASS" starttime="20211022 17:20:08.888" endtime="20211022 17:20:09.145"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:32.545" endtime="20211021 17:12:32.804"/>
-</kw>
-<kw name="Verify Page Loaded" library="LandingPage">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Home Page</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20211021 17:12:32.805" endtime="20211021 17:12:32.814"/>
+<status status="PASS" starttime="20211022 17:20:09.145" endtime="20211022 17:20:09.152"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:32.804" endtime="20211021 17:12:32.814"/>
+<status status="PASS" starttime="20211022 17:20:08.888" endtime="20211022 17:20:09.153"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:32.545" endtime="20211021 17:12:32.814"/>
+<status status="PASS" starttime="20211022 17:20:08.888" endtime="20211022 17:20:09.153"/>
 </kw>
 <kw name="Login Web site" library="ScriptApp">
-<kw name="Perform login" library="Login">
+<kw name="Login and Verify" library="Login">
+<arg>@{USENAME_PASSWORD_LOGGINED}</arg>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${ICON}</arg>
+<arg>${LoginIcon}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:32.815" level="INFO">Clicking element 'xpath:/html/body/header/div/nav/ul[2]/li/a'.</msg>
-<status status="PASS" starttime="20211021 17:12:32.815" endtime="20211021 17:12:32.845"/>
+<msg timestamp="20211022 17:20:09.154" level="INFO">Clicking element '//div[@class='profile-photo']//parent::a'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.153" endtime="20211022 17:20:09.184"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:name</arg>
-<arg>${USENAME_PASSWORD_LOGGINED}[0]</arg>
+<arg>${list}[0]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:32.846" level="INFO">Typing text 'Roman' into text field 'id:name'.</msg>
-<status status="PASS" starttime="20211021 17:12:32.846" endtime="20211021 17:12:32.901"/>
+<msg timestamp="20211022 17:20:09.185" level="INFO">Typing text 'Roman' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.184" endtime="20211022 17:20:09.243"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:password</arg>
-<arg>${USENAME_PASSWORD_LOGGINED}[1]</arg>
+<arg>${list}[1]</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:32.902" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg timestamp="20211021 17:12:32.925" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20211021 17:12:32.948" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20211021 17:12:32.902" endtime="20211021 17:12:32.948"/>
+<msg timestamp="20211022 17:20:09.243" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20211022 17:20:09.268" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211022 17:20:09.293" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211022 17:20:09.243" endtime="20211022 17:20:09.293"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:32.949" level="INFO">Clicking element 'id:login-button'.</msg>
-<status status="PASS" starttime="20211021 17:12:32.948" endtime="20211021 17:12:32.976"/>
+<msg timestamp="20211022 17:20:09.294" level="INFO">Clicking element 'id:login-button'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.294" endtime="20211022 17:20:09.323"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:32.814" endtime="20211021 17:12:32.976"/>
-</kw>
-<kw name="Verify login" library="Login">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>id=user-name</arg>
-<arg>${USENAME_PASSWORD_LOGGINED}[2]</arg>
+<arg>${list}[2]</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20211021 17:12:32.990" level="INFO">Element 'id=user-name' contains text 'ROMAN IOVLEV'.</msg>
-<status status="PASS" starttime="20211021 17:12:32.976" endtime="20211021 17:12:32.990"/>
+<msg timestamp="20211022 17:20:09.338" level="INFO">Element 'id=user-name' contains text 'ROMAN IOVLEV'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.324" endtime="20211022 17:20:09.338"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:32.976" endtime="20211021 17:12:32.990"/>
+<status status="PASS" starttime="20211022 17:20:09.153" endtime="20211022 17:20:09.338"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:32.814" endtime="20211021 17:12:32.990"/>
+<status status="PASS" starttime="20211022 17:20:09.153" endtime="20211022 17:20:09.338"/>
 </kw>
 <kw name="Service Page actions" library="ScriptApp">
 <kw name="Load and Verify" library="ServicePage">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SERVICE_MENU}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:32.991" level="INFO">Clicking element 'xpath:/html/body/header/div/nav/ul[1]/li[3]/a'.</msg>
-<status status="PASS" starttime="20211021 17:12:32.991" endtime="20211021 17:12:33.017"/>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Service</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211022 17:20:09.339" level="INFO">Clicking link 'Service'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.339" endtime="20211022 17:20:09.372"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Different elements</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:33.018" level="INFO">Clicking link 'Different elements'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.018" endtime="20211021 17:12:33.318"/>
+<msg timestamp="20211022 17:20:09.372" level="INFO">Clicking link 'Different elements'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.372" endtime="20211022 17:20:09.657"/>
 </kw>
 <kw name="Page Should Contain Button" library="SeleniumLibrary">
 <arg>Default Button</arg>
 <doc>Verifies button ``locator`` is found from current page.</doc>
-<msg timestamp="20211021 17:12:33.340" level="INFO">Current page contains button 'Default Button'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.318" endtime="20211021 17:12:33.340"/>
+<msg timestamp="20211022 17:20:09.677" level="INFO">Current page contains button 'Default Button'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.657" endtime="20211022 17:20:09.677"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:32.991" endtime="20211021 17:12:33.340"/>
+<status status="PASS" starttime="20211022 17:20:09.339" endtime="20211022 17:20:09.677"/>
 </kw>
 <kw name="Select checkboxes and buttons" library="ServicePage">
 <kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>${WATER_CHECKBOX}</arg>
+<arg>${WaterCheckbox}</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:33.341" level="INFO">Selecting checkbox 'xpath:/html/body/div/div[2]/main/div[2]/div/div[2]/label[1]/input'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.340" endtime="20211021 17:12:33.385"/>
+<msg timestamp="20211022 17:20:09.678" level="INFO">Selecting checkbox '//label[text()[contains(.,'Water')]]//child::input'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.678" endtime="20211022 17:20:09.725"/>
 </kw>
 <kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>${WIND_CHECKBOX}</arg>
+<arg>${WindCheckbox}</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:33.386" level="INFO">Selecting checkbox 'xpath:/html/body/div/div[2]/main/div[2]/div/div[2]/label[3]/input'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.385" endtime="20211021 17:12:33.436"/>
+<msg timestamp="20211022 17:20:09.725" level="INFO">Selecting checkbox '//label[text()[contains(.,'Wind')]]//child::input'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.725" endtime="20211022 17:20:09.773"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${SELEN_RADIO}</arg>
+<arg>${SilverRadio}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:33.436" level="INFO">Clicking element 'xpath:/html/body/div/div[2]/main/div[2]/div/div[3]/label[4]'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.436" endtime="20211021 17:12:33.461"/>
+<msg timestamp="20211022 17:20:09.773" level="INFO">Clicking element '//label[text()[contains(.,'Silver')]]//child::input'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.773" endtime="20211022 17:20:09.802"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${COLOR_MENU}</arg>
+<arg>${ColorMenu}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:33.462" level="INFO">Clicking element 'xpath:/html/body/div/div[2]/main/div[2]/div/div[4]/select'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.461" endtime="20211021 17:12:33.496"/>
+<msg timestamp="20211022 17:20:09.803" level="INFO">Clicking element '//div[@class='colors']//child::select'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.802" endtime="20211022 17:20:09.837"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${YELLOW_SELECT}</arg>
+<arg>${YellowSelect}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211021 17:12:33.496" level="INFO">Clicking element 'xpath:/html/body/div/div[2]/main/div[2]/div/div[4]/select/option[4]'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.496" endtime="20211021 17:12:33.517"/>
+<msg timestamp="20211022 17:20:09.838" level="INFO">Clicking element '//option[text()[contains(.,'Yellow')]]'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.837" endtime="20211022 17:20:09.860"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:33.340" endtime="20211021 17:12:33.517"/>
+<status status="PASS" starttime="20211022 17:20:09.677" endtime="20211022 17:20:09.860"/>
 </kw>
 <kw name="Confirm Selection status" library="ServicePage">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${WATER}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20211021 17:12:33.525" level="INFO">Current page contains text 'Water: condition changed to true'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.517" endtime="20211021 17:12:33.526"/>
+<msg timestamp="20211022 17:20:09.868" level="INFO">Current page contains text 'Water: condition changed to true'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.861" endtime="20211022 17:20:09.868"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${WIND}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20211021 17:12:33.535" level="INFO">Current page contains text 'Wind: condition changed to true'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.526" endtime="20211021 17:12:33.535"/>
+<msg timestamp="20211022 17:20:09.876" level="INFO">Current page contains text 'Wind: condition changed to true'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.869" endtime="20211022 17:20:09.876"/>
 </kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>${LOG_WINDOW}</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${SELEN}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20211021 17:12:33.549" level="INFO">Element 'xpath://*[@id="mCSB_2_container"]/section[1]/div[2]/div/ul' contains text 'metal: value changed to Selen'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.535" endtime="20211021 17:12:33.549"/>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211022 17:20:09.883" level="INFO">Current page contains text 'Selen'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.876" endtime="20211022 17:20:09.883"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${YELLOW}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20211021 17:12:33.557" level="INFO">Current page contains text 'Colors: value changed to Yellow'.</msg>
-<status status="PASS" starttime="20211021 17:12:33.549" endtime="20211021 17:12:33.557"/>
+<msg timestamp="20211022 17:20:09.891" level="INFO">Current page contains text 'Colors: value changed to Yellow'.</msg>
+<status status="PASS" starttime="20211022 17:20:09.884" endtime="20211022 17:20:09.891"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:33.517" endtime="20211021 17:12:33.557"/>
+<status status="PASS" starttime="20211022 17:20:09.860" endtime="20211022 17:20:09.891"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:32.991" endtime="20211021 17:12:33.557"/>
+<status status="PASS" starttime="20211022 17:20:09.339" endtime="20211022 17:20:09.891"/>
 </kw>
 <kw name="End Web Test" library="Common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20211021 17:12:33.558" endtime="20211021 17:12:35.680"/>
+<status status="PASS" starttime="20211022 17:20:09.892" endtime="20211022 17:20:12.002"/>
 </kw>
-<status status="PASS" starttime="20211021 17:12:33.557" endtime="20211021 17:12:35.680"/>
+<status status="PASS" starttime="20211022 17:20:09.892" endtime="20211022 17:20:12.002"/>
 </kw>
 <doc>Perform some actions at the test site</doc>
 <tag>Exercise 1</tag>
-<status status="PASS" starttime="20211021 17:12:30.675" endtime="20211021 17:12:35.680"/>
+<status status="PASS" starttime="20211022 17:20:07.080" endtime="20211022 17:20:12.002"/>
 </test>
 <doc>Perform some actions at the test site</doc>
-<status status="PASS" starttime="20211021 17:12:30.516" endtime="20211021 17:12:35.680"/>
+<status status="PASS" starttime="20211022 17:20:06.929" endtime="20211022 17:20:12.002"/>
 </suite>
 <statistics>
 <total>
